@@ -1,130 +1,76 @@
-⚡ FastCharge Hybrid Universal 🔋
+# ⚡ FastCharge Hybrid Qualcomm GeN2
 
-Modul Android universal untuk fast charging adaptif & pintar dengan kendali suhu otomatis.
-📦 Fitur Utama
+Modul ini dibuat untuk membantu **mengontrol pengisian daya (fast charging)** pada perangkat Android yang menggunakan **PMIC Qualcomm generasi ke-2**, seperti **PM8150** dan **PM8150b**. Cocok digunakan untuk mengurangi overheating saat pengisian daya, terutama saat gaming atau multitasking berat.
 
-    ✅ Pengisian daya adaptif berdasarkan suhu & daya (Watt)
+Modul ini tidak mematikan pengisian sepenuhnya, melainkan hanya menunda sementara saat suhu terlalu tinggi, lalu melanjutkan kembali saat suhu cukup aman.
 
-    🔥 Tanpa mematikan charging — throttle hanya perlambat agar aman
+---
 
-    ⚙️ Kompatibel dengan semua jenis kernel (GKI1, GKI2, dll)
+## ✅ Fitur
 
-    🛠️ Support Magisk & KSU Next (tanpa Magisk)
+- Menunda pengisian saat suhu baterai terlalu tinggi
+- Melanjutkan pengisian otomatis saat suhu turun
+- Tidak mematikan charging total (bukan charger killer!)
+- Kompatibel dengan **modul root modern** (Magisk & KernelSU)
+- Bebas diubah atau diadaptasi
 
-    🧠 Otomatis deteksi suhu & daya real-time
+---
 
-    🧾 Logging real-time di: /data/local/tmp/fcharge.log
+## 📲 Kompatibilitas
 
-🌡️ Profil Suhu Adaptif Berdasarkan Daya
-Daya (W)	Batas Suhu	Aksi Throttle
-0–20W	    ≤ 42°C	    Tidak throttle
-20–40W	    ≤ 40°C	    Soft throttle
-40–80W	    ≤ 38°C	    Hard throttle
-80–120W	    ≤ 35–36°C	Ultra throttle
-🔧 Syarat
+Modul ini kompatibel dengan:
 
-    Busybox (Brutal Busybox direkomendasikan)
+- **Magisk**:  
+  - Zygisk Bawaan  
+  - Zygisk-Next  
+  - ReZygisk  
+- **KernelSU**:  
+  - KSU Official  
+  - KernelSU Next  
+  - Sukisú  
+- **Apatch (APSU)**
 
-    Jika pakai Magisk → aktifkan Zygisk
+> ⚠️ Modul ini **ditujukan untuk perangkat dengan PMIC Qualcomm seperti PM8150/PM8150b**, misalnya POCO F2 Pro, Mi 9, Mi 10, K20 Pro, dan lainnya. Tidak semua device didukung penuh—uji coba dianjurkan.
 
-    Jika pakai KSU → install Zygisk-Next atau reZygisk
+---
 
-🧠 Auto Bahasa
+## 📦 Instalasi
 
-Instalasi mendukung deteksi bahasa otomatis:
+1. Pasang modul ini lewat Magisk atau KernelSU
+2. Pastikan **BusyBox tersedia di environment root**, terutama jika kamu pakai Zygisk! (Zygisk-Next/Rezygisk)
+3. Reboot
+4. Selesai! Modul aktif otomatis
 
-    🇮🇩 Indonesia
+---
 
-    🇺🇸 English
+## ⚙️ Syarat BusyBox
 
-    🇯🇵 日本語
+Modul ini **membutuhkan BusyBox** untuk menjalankan skrip internal.
 
-    🇨🇳 中文
+- Jika kamu menggunakan **Zygisk**, kamu **WAJIB menginstal BusyBox varian baru**, seperti:
+  - **Brutal BusyBox by feravolt** (✅ direkomendasikan)
+  - Atau minimal **BusyBox v1.36+**
+- **KernelSU** biasanya sudah aman karena environment root-nya tidak terlalu terbatas seperti Zygisk.
 
-    🇹🇭 ไทย
+> 🔧 Jika tidak ada BusyBox atau versi terlalu lama, modul mungkin tidak bekerja dengan baik atau gagal menjalankan skrip.
 
-    🇸🇦 العربية
+---
 
-    🇰🇷 한국어
+## 👤 Pembuat
 
-    ...dan lainnya (deteksi berdasarkan sistem)
+> 🛠️ Dibuat oleh: **aifu-ID x AI**  
+> 🧠 GitHub: [github.com/aifuID](https://github.com/aifuID)
 
-🛠️ Instalasi
+---
 
-    Flash .zip via Magisk / KSU
+## ⚠️ Catatan Tambahan
 
-    Reboot
+- Modul ini **tidak bersifat universal untuk semua jenis IC charging**.
+- Jika perangkat kamu menggunakan charger IC berbeda (seperti SMB1390), perilaku mungkin sedikit berbeda.
+- Harap pastikan baterai sehat dan suhu normal agar modul bekerja optimal.
 
-    Modul aktif otomatis
+---
 
-👨‍💻 Author
+## 🤝 Lisensi
 
-aifu-ID x AI
-GitHub: https://github.com/aifuID
-
-==================================================================================
-==================================================================================
-
-⚡ FastCharge Hybrid Universal 🔋
-
-A universal Android module for adaptive fast charging with smart thermal control.
-📦 Key Features
-
-    ✅ Adaptive charging based on temperature & power (Watts)
-
-    🔥 Never disables charging — only throttles to keep it safe
-
-    ⚙️ Compatible with all kernel types (GKI1, GKI2, etc.)
-
-    🛠️ Works with Magisk or KSU Next (no Magisk required)
-
-    🧠 Real-time temperature & power detection
-
-    🧾 Logs available at: /data/local/tmp/fcharge.log
-
-🌡️ Adaptive Temperature Profile
-Power (W)	Temp Limit	Throttle Action
-0–20W	    ≤ 42°C	    No throttle
-20–40W	    ≤ 40°C	    Soft throttle
-40–80W	    ≤ 38°C	    Hard throttle
-80–120W	    ≤ 35–36°C	Ultra throttle
-🔧 Requirements
-
-    Busybox (Brutal Busybox recommended)
-
-    If using Magisk → Zygisk must be enabled
-
-    If using KSU → install Zygisk-Next or reZygisk
-
-🌍 Auto Language Detection
-
-Installer supports automatic language detection:
-
-    🇮🇩 Bahasa Indonesia
-
-    🇺🇸 English
-
-    🇯🇵 Japanese
-
-    🇨🇳 Chinese
-
-    🇹🇭 Thai
-
-    🇸🇦 Arabic
-
-    🇰🇷 Korean
-
-    ...and more (based on system language)
-
-📥 Installation
-
-    Flash .zip via Magisk or KSU
-
-    Reboot
-
-    Module auto-activates
-
-👨‍💻 Author
-
-aifu-ID x AI
-GitHub: https://github.com/aifuID
+Modul ini open-source dan bebas digunakan atau dimodifikasi. Jangan lupa beri kredit 😄
