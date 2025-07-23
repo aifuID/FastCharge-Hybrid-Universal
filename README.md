@@ -54,6 +54,13 @@ Modul ini **membutuhkan BusyBox** untuk menjalankan skrip internal.
 
 > 🔧 Jika tidak ada BusyBox atau versi terlalu lama, modul mungkin tidak bekerja dengan baik atau gagal menjalankan skrip.
 
+📱 Aplikasi Check Alternatif:
+    Battery Guru
+    AccA
+    Franco Kernel Manager
+    3C Toolbox
+    DevCheck (kadang tidak mendalam)
+
 ---
 
 ## 👤 Pembuat
