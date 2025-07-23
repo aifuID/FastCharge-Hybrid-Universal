@@ -1,0 +1,6 @@
+id=fastcharge_hybrid_qcom_gen2
+name=FastCharge Hybrid Qualcomm GeN2
+version=1.1-fix
+versionCode=11
+author=aifu-ID x AI
+description=⚡ Kontrol suhu pengisian untuk Qualcomm Gen2 (Auto Cooldown @41°C → 38°C)
