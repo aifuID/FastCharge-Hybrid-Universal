@@ -17,10 +17,10 @@ Modul Android universal untuk fast charging adaptif & pintar dengan kendali suhu
 
 🌡️ Profil Suhu Adaptif Berdasarkan Daya
 Daya (W)	Batas Suhu	Aksi Throttle
-0–20W	≤ 42°C	Tidak throttle
-20–40W	≤ 40°C	Soft throttle
-40–80W	≤ 38°C	Hard throttle
-80–120W	≤ 35–36°C	Ultra throttle
+0–20W	    ≤ 42°C	    Tidak throttle
+20–40W	    ≤ 40°C	    Soft throttle
+40–80W	    ≤ 38°C	    Hard throttle
+80–120W	    ≤ 35–36°C	Ultra throttle
 🔧 Syarat
 
     Busybox (Brutal Busybox direkomendasikan)
@@ -61,9 +61,11 @@ Instalasi mendukung deteksi bahasa otomatis:
 
 aifu-ID x AI
 GitHub: https://github.com/aifuID
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 =======================================================================================================================================
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ⚡ FastCharge Hybrid Universal 🔋
 
 A universal Android module for adaptive fast charging with smart thermal control.
@@ -83,10 +85,10 @@ A universal Android module for adaptive fast charging with smart thermal control
 
 🌡️ Adaptive Temperature Profile
 Power (W)	Temp Limit	Throttle Action
-0–20W	≤ 42°C	No throttle
-20–40W	≤ 40°C	Soft throttle
-40–80W	≤ 38°C	Hard throttle
-80–120W	≤ 35–36°C	Ultra throttle
+0–20W	    ≤ 42°C	    No throttle
+20–40W	    ≤ 40°C	    Soft throttle
+40–80W	    ≤ 38°C	    Hard throttle
+80–120W	    ≤ 35–36°C	Ultra throttle
 🔧 Requirements
 
     Busybox (Brutal Busybox recommended)
